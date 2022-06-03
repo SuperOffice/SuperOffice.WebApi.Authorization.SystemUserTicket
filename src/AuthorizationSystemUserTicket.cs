@@ -7,9 +7,11 @@ using SuperOffice.WebApi.Authorization.SystemUserTicket.Exceptions;
 namespace SuperOffice.WebApi.Authorization
 {
     /// <summary>
-    /// SOTicket for use with SystemUser tokens in CRM online only. See <seealso cref="IAuthorization"/>.
+    /// SOTicket for use in CRM online with SystemUser tokens. See <seealso cref="IAuthorization"/>.
     /// </summary>
+#pragma warning disable CS0436 // Type conflicts with imported type
     public class AuthorizationSystemUserTicket : AuthorizationTicket, IAddHeaders
+#pragma warning restore CS0436 // Type conflicts with imported type
     {
         /// <summary>
         /// Ticket Authorization constructor used in CRM online scenario's where client secret is required.
